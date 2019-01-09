@@ -1,0 +1,249 @@
+Core Java | C | C++
+
+OOPS, polymorphism, encapsulation, abstraction, inheritance
+
+keywords: static, access modifiers (public, private, protected, default), abstract, final
+
+
+Java: Object oriented
+
+Real world: object
+
+class: template: methods| properties/ variables
+
+Object of the class | Relationship (Is-a | has-a)
+
+Ram is driving  wagonR of red color with number UP15-1234
+
+Person : hand, read, write| car: color, engine, gears, breaks, (thing)
+
+1. Ram is an employee
+2. Person has a address
+class Person{
+//Person has a name
+String name;
+int age;
+//has-a : association
+Address address;
+void read(){}
+void write(){}
+
+}
+//Employee is a person
+class Employee extends Person{//inheritance
+String company;
+float salary;
+LocalTime startTime;
+
+}
+
+
+Blueprint: classes : relationship, objects
+
+//school: students: class
+Ram is a student studying in 5th class in Meerut public school
+
+//classes: Student, School, Standard
+
+class Student{
+
+
+}
+
+class School{
+
+}
+class Standard{
+
+
+}
+
+Property: primitive | Object
+
+
+primitive  data types:
+
+byte: 8 bit : 10010010 (20: 00010100 )
+short: 16 bits
+int: 32
+long: 64
+float: 32
+double: 64
+boolean : true/ false
+char : 16 bits
+
+Class
+String: new String(); //new object of the class
+Byte
+Short
+Integer
+Long
+Float
+Double
+Boolean
+Character
+//Own classes
+
+
+
+method
+
+access-modifier return-type name (Datatype name....){
+
+}
+
+
+
+Access modifiers:
+
+1) Public: Visible to all
+2) Protected: Visible to all classes in the same package and to
+the subclasses in the diff package using the child class reference
+3) Default: Visible to all classes in the same package only
+4) Private: Only accessible in the class in which it has been defined
+
+Class: public, default
+variable/ method: any access modifier
+static
+
+Package: folder: logically group the classes
+
+
+
+Q)
+package p1;
+public class Person{
+protected int age;
+public int y;
+
+}
+
+package p2;
+import p1.Person;
+class Student extends Person{
+void print(){
+Person p1= new Person();
+Sysem.out.println(p1.y);
+System.out.println(this.age);
+
+}
+
+}
+
+
+//
+Access modifiers
+Arithemtic: + , -, *, / , %, +=, -=, *=, /=, %=, --, ++
+
+Relational : <, >, <=, >=, == (true/ false)
+
+Logical: boolean, bitwise
+Boolean: &&, &, ||, |
+
+
+	//Casting in java: Implicit | Explicit
+
+byte short 	int 	long
+8	16  	32  	64
+
+int a= 32;: 00000000 00000000 00000000 00100000
+
+32 bits for storing the value of a:00000000 00000000 00000000 00100000
+
+byte b= a;
+//8 bits to store the value of b
+
+
+int x= 32; //32
+long l= x;//64 Implicit
+
+byte b= 12;
+short x= b; //widening
+
+byte -> short -> int -> long -> float -> double (implicit| broadening| widening cast)
+
+double -> float-> long-> int -> short -> byte (explicit| narrowing casting)
+
+
+100000000110000: 1.00E12
+
+
+conditional | loops
+
+control statements: selection statement
+
+int x= 5;
+
+if(x<0){
+-----
+
+}else{
+
+----
+}
+
+for(initialization; condition; inc/dec){
+
+}
+
+for(int x=0, y=0; x<=5 && y<=4; x+=2, y++){
+
+}
+
+
+for(;;)
+
+
+Array? 
+
+Collection of same type of elements, index based, fixed in size
+
+student marks in each subject
+float hindiMarks=34.5f;
+float englishMarks= 65.4f;
+
+//sum | percentage| 
+
+float[] marks= new float[5]; //5 subject marks: float
+
+keywords: variables | oops
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C: procedural language

@@ -1,0 +1,74 @@
+3 types of variables:
+1) Local variable: Scope is within the block/method. They must be initialized before they are used. They are not initialized by default.
+2) Instance variable: scope is for a particular object of a class. Initialized by default.
+3) Static variable: Belongs to a class. Initialized by default when the class is loaded in the jvm
+int: 0
+String: null
+float: 0.0f
+boolean: false
+
+
+Loading a class
+
+1) rt.jar (Bootstrap class loader)
+2) Extension class loader: ext folder {only be loaded}
+3) System/Application ClassLoader: classpath
+
+//Java: bytecode 
+//Source file : .java
+Compiled into a bytecode(.class): Independent of which machine (Platform independent)
+
+Jvm (Java virtual machine) specific to ur machine: machine specific : run
+
+//JVM, jre, jdk
+
+JDK: java development kit? compiler, javadoc, debugger, jvm, libraries
+JRE: java runtime environment: run ur code: jvm, libraries
+
+JDK superset of jre
+
+eclipse: inbuilt compiler
+
+
+OOPs:
+
+
+Polymorphism?
+
+many forms
+
+1) Method Overloading:
+a) Arguments shoud be different: number/ type/ order
+b) Return type does not matter
+c) access modifiers does not matter
+d) name of the method shud be same
+
+
+2) Method overriding
+a) Parent child relationship
+b) Arguments should be exactly same
+c) Return type should be same or can be covariant
+d) access modifiers cannot be more restrictive
+
+public > protected> default > private
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
