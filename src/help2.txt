@@ -1,0 +1,226 @@
+Demo3 obj= new Demo3();// class file
+//class should be present at compile time
+But it may happen that somehow you forget to add the jar/ class file on the runtime environment. Then it may throw a uncheckedException: ClassDefNotFoundError
+
+//We may need to load a class which is not present at compile time, but would be available at runtime, we dynamically load it into the jvm
+
+Class.forName("package.Demo3");
+//It throws a checkedException: ClassNotFoundException: What it should do if the class is not present at runtime
+
+
+Garbage collection
+
+object: heap space: spawns thread: garbage collector thread(deamon)
+remove all teh objects from heap which are not being used from the memory
+
+
+class Demo{
+
+public static void main(String args[]){
+String obj= new String("Hello"); //heap
+//obj= null; //this makes this object elligible for Garbage collection
+obj= new String("Hi");
+}
+
+Scheduler: process: schedules ur thread
+
+finalize(): method from ur Object class: protected
+
+Object class
+
+Try with a  resource block
+
+access: public, private, default, protected
+static: method/ block/ variable
+Variable: Local, Instance, Class
+Method Overloading|Overriding: Polymorphism
+
+final: variable, method, class
+
+1) Local variable should be initialized before it is used. Final: Once u initialize it, u cannot change it's value
+2) Instance variable : belongs to an object of the class. U don't need to initialize them. Once u declare the instance variable to be final, u should initialize it before it's object is created (instance block/ constructor/ declaration)
+3) Class / Static variable: U don't need to initialize them. Once u declare the class variable to be final, u should provide the value for it before the class is loaded into the memory
+
+
+Final method: A method which cannot be overridden
+
+
+Final class: Class which cannot be extended
+
+Inheritance
+
+Is-a
+Student is a person
+Manager is an Employee
+//abstract/ interface?
+
+
+abstract class AddEmployee{
+
+void addSubEmployee(Employee e){
+	throw new UnsupportedException();
+}
+
+
+}
+
+Abstract: method/ class
+1) Method: it does not have an implementation/ body
+ public void m1();
+2) Abstract class: It can have 0 or more abstract methods. If you don't want anyone to be able to create object of that class. 
+Can an abstract class have a constructor? Yes {constructor}
+
+
+Interface?
+abstract method| contract: child class should provide the implementation for those methods. 100% abstract class.
+method: public static abstract
+property: public static final (constant) public static final 
+float PI= 3.14f ;
+
+Car: engine: start, stop| 
+	
+
+
+
+class Employee{
+Set<Employee> employees;
+
+ int leavesAvaialble =15;
+ void workOnProject(Project p){}
+
+ void getSalary(){}
+	
+ void takeLeave(){
+if({leavesAvaialble >0){
+leavesAvaialble --; 
+}else{
+Sysout("Not elligible for leave");
+}
+
+}
+
+ 
+
+}
+
+class Manager extends Employee{
+addSubEmployee(Employee e){
+	employees.add(e)
+}
+
+
+
+}
+
+
+class VP extends Employee{
+addSubEmployee(Employee e){
+	employees.add(e)
+}
+
+}
+
+
+//Child classes to hv this method addSubEmployee
+//Parent : addSubEmployee: not supported
+
+SOLID design principle: 
+
+OpenClosePrinciple:
+
+Class should be open for extension, closed for modification
+
+static methods
+
+private methods
+
+
+factory method
+
+
+Constructor:
+1) Name of the constructor is same as teh class
+2) Don't return a value
+3) public/private/protected/default
+4) Any no. of args
+
+Default:
+No arg
+Access modifier is same as the clas
+1st line is the call to the super class constructor
+
+
+The default constructor is only provided if u don't provide any constructor for the class
+
+You can always overload a constructor
+Can u override a constructor? No
+
+In a constructor call to the super() is added by default in the first line. You can also make a call to this class constructor
+But u cannot have a call to super()| this() in other than the 1st line in the constructor
+U cannot have a constructor calling both super() & this();
+this()| super(): shud be 1st line in the constructor
+
+class Deno{
+Deno(){}
+Deno(int z){
+this();// super();
+
+}
+
+}
+
+
+
+Object: equals: ==
+It checks whether the two references point to the same object
+
+Object o1= new Object();
+Object o2= new Object();
+Object o3= o1;
+
+Sysout(o1==o3)
+Sysout(o2==o3)
+Sysout(o1==o2)
+Sysout(o1.equals(o3))  //== true
+Sysout(o2.equals(o3))	false
+Sysout(o1.equals(o2))	false
+
+
+String str1= new String("Hello");
+String str2= new String("Hello");
+String str3= str1;
+Sysout(str1==str2); //false
+Sysout(str1.equals(str2));//true
+Sysout(str1==str3); //true
+Sysout(str1.equals(str3));//true
+
+
+
+equals()
+
+toString()
+
+String class
+main(){
+String str= "Hello"; //String Literal
+String str1= new String("Hello"); // Object
+String str2= "Hello";
+String str3= new String("Hello"); 
+
+When u try to clone a object of a class, u should implement Cloneable interface. (Contract) else it will throw CloneNotSupportedException
+
+Object clone(): shallow copy of your object
+
+Cloning:
+a) Deep copy
+b) Shallow copy
+
+Singleton: one object
+
+ConnectionPool| ThreadPool
+
+
+
+
+
+

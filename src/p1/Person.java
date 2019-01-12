@@ -1,10 +1,16 @@
 package p1;
 
-public class Person {
+abstract public class Person {
 
 	protected String name;
 	protected int age;
-	protected static int count;
+//	Address address;
+	
+	public Person(){
+		super();
+		age= 20;
+	}
+	public static int count;
 	{
 		count++;
 	}
@@ -20,6 +26,11 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+	@Override
+	public void finalize() {
+		count--;
+	//	address= null;
+		System.out.println("Person object removed!!");
+	}
 	
 }

@@ -47,7 +47,7 @@ d) name of the method shud be same
 2) Method overriding
 a) Parent child relationship
 b) Arguments should be exactly same
-c) Return type should be same or can be covariant
+c) Return type should be same or can be co-variant (There can be a parent-child relatiosnhip)
 d) access modifiers cannot be more restrictive
 
 public > protected> default > private

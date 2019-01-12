@@ -1,12 +1,29 @@
 package com.java.demo;
 
+import java.util.Scanner;
+
 import p1.Person;
 
 public class Demo1 {
-	public static void main(String[] args) {
-		Person p1= new Person();
-		Employee e1= new Employee();
+	Scanner obj= new Scanner(System.in);
+	public static void main(String[] args) throws InterruptedException {
+	/*	Person p1= new Person();
 		
+		Person p2= new Person();
+		System.out.println(Person.count);
+		p1= null;
+		p2= null;
+		System.gc(); //Asking ur scheduler to run gc thread
+		Thread.sleep(5000);
+		System.out.println(Person.count);
+		System.out.println("done");*/
+		
+		Student obj= new Student();
+		Teacher teacher = new Teacher();
+	}
+	@Override
+	public void finalize() {
+		obj.close();
 	}
 
 }
